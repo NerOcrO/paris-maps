@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+}
+body {
+  font-size: 14px;
+}
+input {
+  height: 50px;
+  width: 300px;
+}
+ul {
+  background: #fff;
+  padding: 0;
+  position: absolute;
+}
+li {
+  background: #fff;
+  border: 1px solid #000;
+  display: block;
+  padding: 10px 10px 10px 0;
+  width: 100%;
+}
+li:hover {
+  background-color: grey;
+  color: #fff;
+  cursor: pointer;
+}
+li span {
+  margin-right: 5px;
+}
+
+@keyframes clignote {
+  0% {fill: #fff}
+  50% {fill: orange}
+  100% {fill: red}
+}
+
+.toggle {
+  animation-name: clignote;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+/* Home */
+.menu {
+  display: flex;
+}
+.menu a {
+  color: #000;
+  font-size: 4rem;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 33%;
+}
+
+@media (max-width: 600px) {
+  .menu a {
+    font-size: 1rem;
+  }
+}
+
+/* RER */
+.rer .small-station {
+  font-size: 7px;
+}
+.rer .letter {
+  font-size: 14px;
+}
+.rer .river {
+  font-size: 18px;
+}
+.rer .fare-zone {
+  font-size: 22px;
+}
+.rer .legend {
+  font-size: 24px;
+}
+.rer .legend-big {
+  font-size: 40px;
+  text-anchor: middle;
+}
+.rer .a {
+  background-color: #cc0033;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 10px;
+}
+.rer .b {
+  background-color: #6699cc;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 10px;
+}
+.rer .c {
+  background-color: #ffcc00;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 10px;
+}
+.rer .d {
+  background-color: #009966;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 10px;
+}
+.rer .e {
+  background-color: #ff99cc;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 10px;
+}
+
+/* ARRONDISSEMENT */
+.district button {
+  background: #e7e7e7;
+  border: 1px solid black;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 5px;
+  text-align: right;
+  width: 90px;
+}
+.district .overlay {
+  background: red;
+}
+.district text {
+  font-size: 24px;
+}
