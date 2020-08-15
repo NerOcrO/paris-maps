@@ -1,8 +1,8 @@
 (() => {
-'use strict'
+  'use strict'
 
-  const $ = selector => document.querySelector(selector)
-  const $$ = selector => document.querySelectorAll(selector)
+  const $ = (selector) => document.querySelector(selector)
+  const $$ = (selector) => document.querySelectorAll(selector)
   const $search = $('.rer .search')
   const $form = $('.rer form')
   const textFocusColor = 'red'
@@ -43,8 +43,8 @@
 
     return span
   }
-  const $$text = Array.from($$('.rer text')).filter(text => text.childElementCount)
-  const stations = $$text.map(text => ({name: text.textContent, fill: getLine(text)}))
+  const $$text = Array.from($$('.rer text')).filter((text) => text.childElementCount)
+  const stations = $$text.map((text) => ({ name: text.textContent, fill: getLine(text) }))
   const autocomplete = (event) => {
     const stationList = $('#list')
 
@@ -52,20 +52,20 @@
       stationList.remove()
     }
 
-    if (event.target.value.length === 0) {
+    if (event.currentTarget.value.length === 0) {
       return
     }
 
-    const validStations = stations.filter(station => station.name.toLowerCase().includes(event.target.value.toLowerCase()))
+    const validStations = stations.filter((station) => station.name.toLowerCase().includes(event.currentTarget.value.toLowerCase()))
     const ul = document.createElement('ul')
     ul.id = 'list'
     const showTheStation = (event) => {
       $$text.forEach((text) => {
-        if (text.textContent === event.target.getAttribute('data-station')) {
+        if (text.textContent === event.currentTarget.getAttribute('data-station')) {
           text.setAttribute('fill', textFocusColor)
           text.previousElementSibling.classList.add('toggle')
           text.previousElementSibling.setAttribute('r', '20')
-          event.target.parentNode.remove()
+          event.currentTarget.parentNode.remove()
         }
       })
     }

@@ -1,8 +1,8 @@
 (() => {
   'use strict'
 
-  const $ = selector => document.querySelector(selector)
-  const $$ = selector => document.querySelectorAll(selector)
+  const $ = (selector) => document.querySelector(selector)
+  const $$ = (selector) => document.querySelectorAll(selector)
   const $$button = $$('button')
   const initColor = '#e7e7e7'
   const overlayColor = 'red'
